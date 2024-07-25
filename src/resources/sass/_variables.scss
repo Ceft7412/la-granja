@@ -1,1 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=League+Spartan:wght@100..900&display=swap");
 
+$primary: "";
+$secondary: "";
+
+// responsive design
+@mixin response-to($breakpoint) {
+  @if $breakpoint == sm601 {
+    @media (max-width: 601px) {
+      @content;
+    }
+  } @else if $breakpoint == sm375 {
+    @media (max-width: 375px) {
+      @content;
+    }
+  } @else if $breakpoint == sm500 {
+    @media (max-width: 500px) {
+      @content;
+    }
+  } @else if $breakpoint == sm550 {
+    @media (max-width: 550px) {
+      @content;
+    }
+  } @else if $breakpoint == sm420 {
+    @media (max-width: 420px) {
+      @content;
+    }
+  } @else if $breakpoint == sm401 {
+    @media (max-width: 401px) {
+      @content;
+    }
+  } @else if $breakpoint == m50 {
+    @media (max-width: 750px) {
+      @content;
+    }
+  } @else if $breakpoint == l840 {
+    @media (max-width: 840px) {
+      @content;
+    }
+  } @else if $breakpoint == l870 {
+    @media (max-width: 870px) {
+      @content;
+    }
+  } @else if $breakpoint == l1010 {
+    @media (max-width: 1010px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == laptop {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if $breakpoint == big-desktop {
+    @media (min-width: 1201px) {
+      @content;
+    }
+  }
+}

@@ -5,18 +5,72 @@
   right: 0;
   left: 0;
   background-color: white;
+  border-bottom: 1px solid rgb(221, 220, 220);
+
   color: black;
   .navbar__flex {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
   }
   .navbar-item {
+    max-width: 1500px;
     width: 100%;
     height: 100%;
-    padding: 5px 50px;
+    padding: 10px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &.section2 {
+      .navbar-item__list {
+        list-style-type: none;
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+    .navbar__logo-container {
+      position: relative;
+      .navbar-logo__big {
+        font-size: 40px;
+        font-family: "League Spartan", Arial, Helvetica, sans-serif;
+        color: #5e8231;
+      }
+      .navbar-logo__small {
+        position: absolute;
+        top: 53%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        font-size: 10px;
+        font-family: "BioRhyme", "Times New Roman", Times, serif;
+      }
+    }
+    .navbar__input-container {
+      position: relative;
+      .navbar__input {
+        border-radius: 5px;
+        border: 1px solid rgb(201, 201, 201);
+        outline: none;
+        padding-right: 50px;
+      }
+      .navbar__search-icon {
+        position: absolute;
+        top: 1px;
+        right: 5px;
+        font-size: 38px;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 20px;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        &:hover {
+          background-color: rgb(8, 124, 43);
+          color: white;
+        }
+      }
+    }
     .navbar__input {
       width: 350px;
       height: 40px;
@@ -27,10 +81,13 @@
     .navbar__menu {
       list-style-type: none;
       display: flex;
+      @include response-to(l840) {
+        display: none;
+      }
 
       .navbar-menu__itm {
         font-size: 20px;
-        padding: 5px 20px;
+        padding: 5px 15px;
         font-weight: 500;
         .navbar-menu__link {
           color: black;
